@@ -1,0 +1,33 @@
+
+# ex) -Dspring.profiles.active=server|local
+
+spring:
+    aop:
+        auto: true
+        proxy-target-class: true
+    messages:
+        basename: i18n/messages
+        cache-seconds: -1
+        encoding: UTF-8
+    mvc:
+        view:
+            prefix: /WEB-INF/views/
+            suffix: .jsp
+    test:
+        mockmvc:
+            print: default
+
+logging:
+    level:
+        root: WARN
+    ROOT: INFO
+    com.koknantech.spring: DEBUG
+
+---
+spring:
+    profiles: server
+
+---
+spring:
+    profiles: local
+

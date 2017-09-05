@@ -1,0 +1,54 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://127.0.0.1/konan-web-service"
+           targetNamespace="http://127.0.0.1/konan-web-service" elementFormDefault="qualified">
+
+    <xs:element name="cams_exRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sessionid" type="xs:string"/>
+                <xs:element name="requestxml" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="cams_exResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="camsex" type="tns:camsex"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="camsex">
+        <xs:sequence>
+            <xs:element name="sessionid" type="xs:string"/>
+            <xs:element name="requestxml" type="xs:string"/>
+            <xs:element name="capital1" type="xs:string"/>
+            <xs:element name="capital2" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+
+    <xs:element name="cams_testRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sessionid" type="xs:string"/>
+                <xs:element name="requestxml" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="cams_testResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sessionid" type="xs:string"/>
+                <xs:element name="requestxml" type="xs:string"/>
+                <xs:element name="capital1" type="xs:string"/>
+                <xs:element name="capital2" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>
